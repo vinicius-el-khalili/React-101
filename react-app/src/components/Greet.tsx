@@ -1,7 +1,3 @@
-# React-101: Typing Props
-
-
-```
 type GreetProps = {
     name:string
 }
@@ -12,8 +8,3 @@ export const Greet = (props:GreetProps)=>{
         </div>
     )
 }
-```
-
-```
-<Greet name="Person"/>
-```

@@ -1,5 +1,6 @@
 # React-101: Basic Props
 
+#### Simple Prop
 
 ```
 type PersonProps={
@@ -14,12 +15,15 @@ export const Person = (props:PersonProps) => {
         )
 }
 ```
+```
+<Person name={{first:"Ana",last:"Maria"}} />
+```
+#### Rendering Arrays
 
 ```
 type PersonListProps={
     names:{first:string,last:string}[]
 }
-
 export const PersonList = (props:PersonListProps) => {
     return(
         <div>
@@ -32,7 +36,6 @@ export const PersonList = (props:PersonListProps) => {
     )
 }
 ```
-
 ```
 <PersonList names={[
         {first:"Louro",last:"José"},

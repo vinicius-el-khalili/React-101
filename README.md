@@ -1,19 +1,42 @@
-# React-101: Typing Props
+# React-101: Basic Props
 
 
 ```
-type GreetProps = {
-    name:string
+type PersonProps={
+    name:{
+        first:string,
+        last:string
+    };
 }
-export const Greet = (props:GreetProps)=>{
+export const Person = (props:PersonProps) => {
+    return(
+        <div>{props.name.first} {props.name.last}</div>
+        )
+}
+```
+
+```
+type PersonListProps={
+    names:{first:string,last:string}[]
+}
+
+export const PersonList = (props:PersonListProps) => {
     return(
         <div>
-            <h2>Welcome, {props.name}!</h2>
+            {props.names.map(name=>{
+                return(
+                    <h2>{name.first} {name.last}</h2>
+                )
+            })}
         </div>
     )
 }
 ```
 
 ```
-<Greet name="Person"/>
+<PersonList names={[
+        {first:"Louro",last:"José"},
+        {first:"Stephen",last:"King"},
+        {first:"George",last:"Orwell"}
+      ]}/>
 ```

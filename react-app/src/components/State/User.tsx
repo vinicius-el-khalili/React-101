@@ -1,6 +1,3 @@
-# React-101: useState Future Value
-
-```
 import { useState } from "react";
 
 type AuthUser = {
@@ -9,7 +6,7 @@ type AuthUser = {
 }
 
 export const User = () => {
-    const [user,setUser] = useState<null|AuthUser>(null); --------------*
+    const [user,setUser] = useState<null|AuthUser>(null);
     const handleLogIn=()=>{
         setUser({
             name:'SpongeBob',
@@ -23,9 +20,8 @@ export const User = () => {
         <div>
             <button onClick={handleLogIn}>Login</button>
             <button onClick={handleLogOut}>Logout</button>
-            <div>User email: {user?.name}</div> ------------------------*
-            <div>User name: {user?.email}</div> ------------------------*
+            <div>User email: {user?.name}</div>
+            <div>User name: {user?.email}</div>
         </div>
     );
 };
-```

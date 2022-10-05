@@ -1,8 +1,3 @@
-# React-101: useState Hooks
-
-- Notice there's not a single line of TypeScript, which shows how reliable inference is.
-
-```
 import { useState } from "react";
 
 export const LoggedIn=()=>{
@@ -21,4 +16,3 @@ export const LoggedIn=()=>{
         </div>
     )
 }
-```

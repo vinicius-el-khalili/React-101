@@ -1,18 +1,2 @@
-# React-101: Style Props
+# React-101: Props Types And Tips
 
-```
-import React from "react";
-
-type ContainerProps = {
-    styles:React.CSSProperties,
-};
-
-export const Container = (props:ContainerProps) =>{
-    return(
-        <div style={props.styles}>Container text</div>
-    )
-};
-```
-```
-<Container styles={{border:'1px solid black',padding:'1rem'}} />
-```
